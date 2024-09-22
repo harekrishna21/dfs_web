@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="dfs_web"
+        android:label="driver_fatigue_system"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

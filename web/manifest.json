@@ -1,6 +1,6 @@
 {
-    "name": "dfs_web",
-    "short_name": "dfs_web",
+    "name": "driver_fatigue_system",
+    "short_name": "driver_fatigue_system",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
