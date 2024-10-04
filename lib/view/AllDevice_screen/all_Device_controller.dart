@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class FierceDrivingController extends GetxController{
+class AllDeviceController extends GetxController{
   final scrollController = ScrollController();
 
 }

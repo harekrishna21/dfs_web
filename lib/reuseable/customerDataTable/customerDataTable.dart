@@ -1,3 +1,4 @@
+import 'package:driver_fatigue_system/reuseable/customButton.dart';
 import 'package:driver_fatigue_system/view/main_screen/mainScreen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +9,7 @@ import '../../utils/appColors.dart';
 import '../data/dummyData.dart';
 
 class DashBoardDataTable extends StatelessWidget {
-  const DashBoardDataTable({super.key});
+  const DashBoardDataTable({super.key,});
 
 
   @override
@@ -48,16 +49,31 @@ class DashBoardDataTable extends StatelessWidget {
                     ),
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset(AppAssets.truckImage, height: 20, width: 20),
-                      SizedBox(width: 10),
-                      const Text(
-                        'All Customer',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
+
+                      Row(
+                        children: [
+                          Image.asset(AppAssets.truckImage, height: 20, width: 20),
+                          SizedBox(width: 10),
+                          const Text(
+                            'All Customer',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
                       ),
+                      SizedBox(width: 5,),
+                      CustomButton(text: 'Add New Customer',
+                        onPressed: (){
+                        controller.selectedIndex.value ==1
+                            ?controller.selectedIndex.value =8
+                            :controller.selectedIndex.value ==2
+                            ?controller.selectedIndex.value = 9:controller.selectedIndex.value =0;
+                        controller.update();
+                      },color: AppColors.green,),
                     ],
                   ),
                 ),

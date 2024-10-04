@@ -4,6 +4,7 @@ class AppAssets {
   /// ------------ drawer icon images -----------------------
 
   static const loginImage = "assets/images/login_image.png";
+  static const loginBGI = "assets/images/loginBGI.png";
   static const cardImage = "assets/images/cards.png";
   static const clientImage = "assets/images/client.png";
   static const dashboardImage = "assets/images/dashboard.png";

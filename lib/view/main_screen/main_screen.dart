@@ -98,16 +98,16 @@ class MainScreen extends StatelessWidget {
                     'All Clients', () {
                   controller.selectedIndex.value = 1;
                   controller.update();
-                }, controller,controller.selectedIndex.value == 1?true:false),
+                }, controller,(controller.selectedIndex.value == 1||controller.selectedIndex.value == 8)?true:false),
                 listTile(
                     AppAssets.tagUserImage,
-                    'Fierce Driving', () {
+                    'All Device', () {
                   controller.selectedIndex.value = 2;
                   controller.update();
-                }, controller,controller.selectedIndex.value == 2?true:false),
+                }, controller,(controller.selectedIndex.value == 2||controller.selectedIndex.value == 9)?true:false),
                 listTile(
                     AppAssets.mapImage,
-                    'Localization', () {
+                    'Payment', () {
                   controller.selectedIndex.value = 3;
                   controller.update();
                 }, controller,controller.selectedIndex.value == 3?true:false),
@@ -117,30 +117,25 @@ class MainScreen extends StatelessWidget {
                   controller.selectedIndex.value = 4;
                   controller.update();
                 }, controller,controller.selectedIndex.value == 4?true:false),
+
                 listTile(
-                    AppAssets.cardImage,
-                    'Earning Report', () {
+                    AppAssets.documentImage,
+                    'Manage Documents', () {
                   controller.selectedIndex.value = 5;
                   controller.update();
                 }, controller,controller.selectedIndex.value == 5?true:false),
                 listTile(
-                    AppAssets.documentImage,
-                    'Manage Documents', () {
+                    AppAssets.ratingImage,
+                    'Review & Rating', () {
                   controller.selectedIndex.value = 6;
                   controller.update();
                 }, controller,controller.selectedIndex.value == 6?true:false),
                 listTile(
-                    AppAssets.ratingImage,
-                    'Review & Rating', () {
+                    AppAssets.logoutImage,
+                    'Log Out', () {
                   controller.selectedIndex.value = 7;
                   controller.update();
                 }, controller,controller.selectedIndex.value == 7?true:false),
-                listTile(
-                    AppAssets.logoutImage,
-                    'Log Out', () {
-                  controller.selectedIndex.value = 8;
-                  controller.update();
-                }, controller,controller.selectedIndex.value == 8?true:false),
               ],
             ),
           ),

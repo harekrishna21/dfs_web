@@ -22,7 +22,7 @@ class CustomerListScreen extends StatelessWidget {
         backgroundColor: AppColors.BGIColor,
         body: SafeArea(
           child: Scrollbar(
-            controller: controller.scrollController, // <---- Here, the controller
+            controller: controller.scrollController,
             thumbVisibility: true,
             child: SingleChildScrollView(
               padding: EdgeInsets.only(right: 10),

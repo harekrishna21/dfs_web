@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
+import '../../reuseable/customerDataTable/customerDataTable.dart';
 import '../../reuseable/header.dart';
 import '../../utils/appColors.dart';
 import '../main_screen/mainScreen_controller.dart';
 import '../main_screen/main_screen.dart';
-import 'fierceDriving_controller.dart';
+import 'all_Device_controller.dart';
 
-class FierceDrivingScreen extends StatelessWidget {
-  const FierceDrivingScreen({super.key});
+class AllDeviceScreen extends StatelessWidget {
+  const AllDeviceScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(FierceDrivingController());
+    final controller = Get.put(AllDeviceController());
     return GetBuilder(
         init: controller,
         builder: (controller){
@@ -27,26 +26,38 @@ class FierceDrivingScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                   padding: EdgeInsets.only(right: 10),
                   controller: controller.scrollController,
-                  child: const Padding(
+                  child:  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Column(
                       children: [
                         SizedBox(height: 15),
-                        Header(title: 'Fierce Driving',date: true,),
+                        Header(title: 'Devices List',date: true,),
                         SizedBox(height: 15,),
-                       /// ----- code for screen -------------------------------
+                        /// ----- code for screen -------------------------------
+                        DashBoardDataTable(),
                         SizedBox(height: 20),
+
                       ],
                     ),
                   ),
                 ),
               ),
             ),
+
           );
         });
   }
   Widget _drawer(BuildContext context) {
     final controller = Get.put(MainScreenController());
-    return MainScreen().drawer(context, controller);
+    return const MainScreen().drawer(context, controller);
+  }
+
+  Widget _buildBottomButton(String text) {
+    return TextButton(
+      onPressed: () {
+        // Add action for each button here
+      },
+      child: Text(text),
+    );
   }
 }

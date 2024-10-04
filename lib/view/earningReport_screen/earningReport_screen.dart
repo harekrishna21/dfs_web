@@ -35,6 +35,7 @@ class EarningReportScreen extends StatelessWidget {
                         SizedBox(height: 15,),
                         /// ----- code for screen -------------------------------
                         SizedBox(height: 20),
+
                       ],
                     ),
                   ),
@@ -48,4 +49,6 @@ class EarningReportScreen extends StatelessWidget {
     final controller = Get.put(MainScreenController());
     return MainScreen().drawer(context, controller);
   }
+
+
 }
