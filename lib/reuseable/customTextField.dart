@@ -5,7 +5,9 @@ class CustomTextField extends StatelessWidget {
   final String? hintText;
   final IconData? icon;
   final bool isPassword;
+  final bool readOnly;
   final TextEditingController? controller;
+  final void Function()? onTap;
 
   const CustomTextField({
     super.key,
@@ -14,6 +16,8 @@ class CustomTextField extends StatelessWidget {
      this.icon,
     this.isPassword = false,
      this.controller,
+    this.readOnly=false,
+    this.onTap,
   });
 
   @override
@@ -21,6 +25,8 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
+        onTap: onTap,
+        readOnly: readOnly,
         controller: controller,
         //obscureText: isPassword,
         decoration: InputDecoration(

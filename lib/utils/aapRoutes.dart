@@ -1,5 +1,6 @@
 
 
+import 'package:driver_fatigue_system/view/customer/customer_mainScreen/customer_mainScreen.dart';
 import 'package:driver_fatigue_system/view/customerList_screen/addNewCustomer/addNewCustomer_screen.dart';
 import 'package:driver_fatigue_system/view/customerList_screen/customerList_binding.dart';
 import 'package:driver_fatigue_system/view/customerList_screen/customerList_screen.dart';
@@ -18,6 +19,7 @@ class AppPages {
     GetPage(name: AppRoutes.loginScreen, page: () => const LoginScreen(), binding: LoginScreenBinding()),
     GetPage(name: AppRoutes.customerScreen, page: () => const CustomerListScreen(), binding: CustomerListBinding()),
     GetPage(name: AppRoutes.addNewCustomer, page: () => const AddNewCustomerScreen(),),
+    GetPage(name: AppRoutes.customerMainScreen, page: () => const CustomerMainScreen(),),
 
 
   ];
@@ -29,5 +31,6 @@ class AppRoutes {
   static const loginScreen = '/loginScreen';
   static const customerScreen = '/customerScreen';
   static const addNewCustomer = '/addNewCustomer';
+  static const customerMainScreen = '/customerMainScreen';
 
 }

@@ -1,5 +1,7 @@
 import 'package:driver_fatigue_system/view/AllDevice_screen/addDevice/addDevice_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 
 import '../../../reuseable/customButton.dart';
@@ -11,7 +13,7 @@ class AddDeviceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = AddDeviceController();
+    final controller = Get.put(AddDeviceController());
     return GetBuilder(
         init: controller,
         builder: (controller){
@@ -56,9 +58,9 @@ class AddDeviceScreen extends StatelessWidget {
                                   ],
                                 ),
                                 SizedBox(height: 10),
-                                const Row(
+                                 Row(
                                   children: [
-                                    Expanded(
+                                    const Expanded(
                                       child: CustomTextField(
                                         labelText: 'Order ID',
                                         hintText: 'Order ID',
@@ -67,6 +69,9 @@ class AddDeviceScreen extends StatelessWidget {
                                     SizedBox(width: 10),
                                     Expanded(
                                       child: CustomTextField(
+                                        onTap:()=> controller.selectDate(context),
+                                        readOnly: true,
+                                        controller: controller.dateController,
                                         labelText: 'Purchase Date',
                                         hintText: 'Purchase Date',
                                       ),
